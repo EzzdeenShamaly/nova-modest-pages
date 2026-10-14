@@ -1,0 +1,117 @@
+/* No web fonts, no CDN, no scripts anywhere on this site.
+   A privacy page that loads a font from a third party hands that third party
+   the reader's IP address, which the page would then have to disclose. System
+   fonts cost nothing and disclose nothing. */
+
+:root {
+  --ink: #1a1a1a;
+  --muted: #5c5c5c;
+  --rule: #e2ddd6;
+  --paper: #faf7f2;
+  --accent: #b8964f;
+  --measure: 38rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 17px;
+}
+
+body {
+  margin: 0;
+  padding: 2.5rem 1.25rem 4rem;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.85;
+  font-family: "Segoe UI", Tahoma, "Noto Sans Arabic", system-ui, -apple-system,
+    sans-serif;
+}
+
+main {
+  max-width: var(--measure);
+  margin-inline: auto;
+}
+
+header {
+  max-width: var(--measure);
+  margin: 0 auto 2.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin: 0;
+  /* direction-fixed: the brandmark's glyph order does not follow the reader */
+  direction: ltr;
+  text-align: start;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin: 0.4rem 0 0.25rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin: 2.25rem 0 0.5rem;
+}
+
+p,
+li {
+  margin: 0.6rem 0;
+}
+
+ul {
+  padding-inline-start: 1.25rem;
+}
+
+a {
+  color: var(--accent);
+}
+
+.updated {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.lead {
+  border-inline-start: 3px solid var(--accent);
+  padding-inline-start: 0.9rem;
+  margin-block: 1.5rem;
+}
+
+.en {
+  direction: ltr;
+  text-align: left;
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+nav {
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.9rem;
+}
+
+nav a {
+  margin-inline-end: 1rem;
+}
+
+code {
+  background: #efe9e1;
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+  /* direction-fixed: an address and a package name read left to right */
+  direction: ltr;
+  display: inline-block;
+}
